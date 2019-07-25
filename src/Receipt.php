@@ -13,4 +13,17 @@ class Receipt {
           return ($amount * $tax);
   }
 
+//   2) Expand on the current Receipt example and add a function that accepts 5 parameters and calculates a sum of them and write a test for it
+  public function exerciseTwo(array $totitem =[]){
+     return array_sum($totitem);
+  }
+
+//   3) Expand on the current Receipt example and add a function that calculates an average value of an array and write a test for this function 
+  public function exerciseThree(array $items =[]){
+      $average = array_sum($items) / count($items);
+      return $average;
+  }
+
+//   4) Organize your tests with phpunit.xml to control the execution of your tests
+
 }

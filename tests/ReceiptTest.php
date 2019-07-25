@@ -23,7 +23,7 @@ namespace TDD\Test;
                   15, // 1st param is expected value
                   $output, // 2nd param is the $output variable
                   'When summing the total should equal 15' // 3rd param is a message displayed in case of failure
-                  );
+                );
 
       }
 
@@ -36,4 +36,30 @@ namespace TDD\Test;
                   );
       }
 
+    //   2) Expand on the current Receipt example and add a function that accepts 5 parameters and calculates a sum of them and write a test for it
+      public function testexerciseTwo(){
+          $totitem = [2, 4, 5, 6, 3];
+          $totoutput = $this->Receipt->exerciseTwo($totitem);
+
+          $this->assertEquals(
+              20,
+              $totoutput,
+              'Total output should be 20'
+          );
+      }
+
+    //   3) Expand on the current Receipt example and add a function that calculates an average value of an array and write a test for this function 
+      public function testexerciseThree(){
+          $items =[8, 4];
+          $output = $this->Receipt->exerciseThree($items);
+
+          $this->assertEquals(
+            6,
+            $output,
+            'False'
+          );
+      }
+
+    //   4) Organize your tests with phpunit.xml to control the execution of your tests
+    
 }
